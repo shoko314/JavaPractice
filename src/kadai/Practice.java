@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Practice {
 
 	public static void main(String[] args) {
+		
 		
 	    	//HelloWorldを変数に代入して表示する
 			helloWorld();
@@ -26,7 +28,7 @@ public class Practice {
 			colortList();
 
 		    //String型のMapを作成して表示
-			stationList();
+			station();
 			
 
 		}
@@ -78,18 +80,21 @@ public class Practice {
 			for (String c : list) {
 				System.out.println("好きな色は" + c + "です");
 			}
-			}
-			
-		//String型のMapを作成して表示する
-			private static void stationList() {
-			Map<String, String> map = new HashMap<>();
-			map.put("Akai", "大阪駅");
-			map.put("Miyazaki", "新今宮駅");
-			map.put("Kioka", "天王寺駅");
-
-			for (Map.Entry<String, String> entry : map.entrySet()) {
-				System.out.println(entry.getKey() + " さんの最寄駅は " + entry.getValue() + "です。");
-			}
 		}
 
-	}
+		//String型のMapを作成して表示する
+			private static void station() {
+				Map<String, String> map = new HashMap< String, String>();
+				map.put("赤井", "大阪駅");
+				map.put("宮崎", "新今宮駅");
+				map.put("木岡", "天王寺駅");
+				
+			//降順でソート
+				List<Entry<String, String>> list_entries = new ArrayList<Entry<String, String>>(map.entrySet());
+				
+				for (Entry<String, String> entry : list_entries){
+					System.out.println(entry.getKey() + "さんの最寄駅は" + entry.getValue() + "です。" );		
+				}
+			}
+}
+			
