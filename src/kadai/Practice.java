@@ -11,6 +11,7 @@ public class Practice {
 
 	public static void main(String[] args) {
 		
+		
 	    	//HelloWorldを変数に代入して表示する
 			helloWorld();
 
@@ -75,6 +76,7 @@ public class Practice {
 			for (String c : list) {
 				System.out.println("好きな色は" + c + "です");
 			}
+<<<<<<< HEAD
 		}
 			
 		//String型のMapを作成して表示する
@@ -91,6 +93,28 @@ public class Practice {
 				System.out.println(entry.getKey() + "さんの最寄駅は" + entry.getValue() + "です。" );		
 			}
 			 
+=======
+>>>>>>> refs/heads/master
 		}
+<<<<<<< HEAD
 		}
 		
+=======
+
+		//String型のMapを作成して表示する
+			private static void station() {
+				Map<String, String> map = new HashMap< String, String>();
+				map.put("赤井", "大阪駅");
+				map.put("宮崎", "新今宮駅");
+				map.put("木岡", "天王寺駅");
+				
+			//降順でソート
+				List<Entry<String, String>> list_entries = new ArrayList<Entry<String, String>>(map.entrySet());
+				
+				for (Entry<String, String> entry : list_entries){
+					System.out.println(entry.getKey() + "さんの最寄駅は" + entry.getValue() + "です。" );		
+				}
+			}
+}
+			
+>>>>>>> refs/heads/master
