@@ -30,12 +30,8 @@ public class Practice {
 		    //String型のMapを作成して表示
 			station();
 			
-
-		}
-
-
+	}
 		
-
 		//HelloWorldを変数に代入して表示
 		private static void helloWorld() {
 			String greeting = "Hello World";
@@ -82,6 +78,7 @@ public class Practice {
 			}
 		}
 
+
 		//String型のMapを作成して表示する
 			private static void station() {
 				Map<String, String> map = new HashMap< String, String>();
@@ -98,3 +95,4 @@ public class Practice {
 			}
 }
 			
+
